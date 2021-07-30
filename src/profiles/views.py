@@ -3,4 +3,4 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 def profiles_home(request):
-    return HttpResponse("<h3> Accounts Home Page </h3>")
+    return HttpResponse("<h3> Profiles Home Page </h3>")
