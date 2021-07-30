@@ -10,7 +10,8 @@ class QuesMcq(models.Model):
         ('chem', 'Chemistry')
     )
     
-    question = models.CharField(max_length=500)
+    question = models.CharField(max_length=500, null=True)
+    question_image = models.ImageField(upload_to='media/images', null=True, blank=True)
     
     option_1 = models.CharField(max_length=500)
     option_2 = models.CharField(max_length=500)
@@ -31,9 +32,6 @@ class QuesMcq(models.Model):
     publish  = models.BooleanField(default=True)
     difficulty_level = models.IntegerField(default=1, validators = [MaxValueValidator(5)] , help_text='Take Range from 1 to 5 only')
     
-    def __str__(self):
-        return self.question
-    
     class Meta:
         verbose_name = 'MCQ type Question'
     
@@ -45,16 +43,14 @@ class QuesIntType(models.Model):
         ('chem', 'Chemistry')
     )
     
-    question = models.CharField(max_length=500)
+    question = models.CharField(max_length=500, null=True)
+    question_image = models.ImageField(upload_to='media/images', null=True, blank=True)
     correct_answer = models.DecimalField(decimal_places=3, max_digits=10)
     
     subject  = models.CharField(max_length=50 ,choices=SUB_CHOICES)
     added_on = models.DateTimeField(auto_now_add=True)
     publish  = models.BooleanField(default=True)
     difficulty_level = models.IntegerField(default=1, validators = [MaxValueValidator(5)] , help_text='Take Range from 1 to 5 only')
-    
-    def __str__(self):
-        return self.question
     
     class Meta:
         verbose_name = 'Numeric Type Question'
