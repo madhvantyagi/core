@@ -1,0 +1,11 @@
+templates --------->> html files
+
+
+static--------------->>>------>>cssfolder----->>>jsfolder.
+
+
+
+
+
+
+                                                       
