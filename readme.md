@@ -4,4 +4,4 @@
 ### Step 2 :- Start Django Server by :- "python3 src/manage.py runserver"
 ### Step 3 :- Start Adding Features!
 
-Developers :- @MADHAVANTYAGI
+Developers :- <a href="https://github.com/MADHAVANTYAGI">Madhavan Tyagi</a>
