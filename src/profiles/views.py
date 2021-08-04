@@ -1,7 +1,7 @@
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
 
-from django.contrib.auth.models import auth
+from django.contrib.auth.models import User, auth
 from .models import Profile
 
 # Create your views here.
@@ -23,7 +23,7 @@ def profiles_login(request):
             
             print('Login Successful')
             
-            return redirect('profiles-home')
+            return redirect('/profiles/user/' + str(user_User.id))
         else:
             print('Invalid Creds')
     
@@ -43,6 +43,28 @@ def profiles_logout(request):
 # Home Page where Logged In users are shown
 def profiles_home(request):
     loggedin_users = Profile.objects.filter(is_online=True)
+    user_User = User.objects.all()
         
-    context = {'loggedin_users' : loggedin_users}
+    context = {
+        'loggedin_users' : loggedin_users,
+        'all_Users' : user_User,
+        }
     return render(request ,'profiles.html', context)
+
+def profiles_user_profile(request, pk):
+    if Profile.objects.filter(pk=pk).exists():
+        user_Profile = Profile.objects.get(pk=pk)
+        user_User = User.objects.get(id=pk)
+        # print(str(request.user))
+        # print(str(user_User.username))
+        
+        if user_Profile.is_online is True and str(request.user) == str(user_User.username):
+            context = {
+                'user_User' : user_User,
+                'user_Profile' : user_Profile,
+                    }
+            return render(request, 'user_profile.html', context)
+        else:
+            return HttpResponse('You are not authorised to access this page')
+    else:
+        return HttpResponse("Profile Doesnot exists")

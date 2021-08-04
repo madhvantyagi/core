@@ -7,9 +7,27 @@
     <title>Profiles</title>
 </head>
 <body>
+    <a href="{% url 'profiles-login' %}">Login Profile</a>
     <h2>Profiles Home Page</h2>
+
+    <hr>
+    <b>List of Online Users :- </b>
+    <hr>
+
     {% for user in loggedin_users %}
-      {{user}}
+      {{user}}<br>
     {% endfor %}
+
+    <br>
+    <br>
+
+    <hr>
+    <b>List of All Users :- </b> 
+    <hr>
+
+    {% for user in all_Users %}
+      {{user}}<br>
+    {% endfor %}
+
 </body>
 </html>
