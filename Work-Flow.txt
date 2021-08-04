@@ -1,0 +1,14 @@
+Profiles
+    - User
+        - Signup / Login Authnetication and Authorisation
+    - Stats ( their score records. )
+    
+Questions
+    - MCQTypeQues
+    - IntTypeQues  //actually they are numeric type ques.
+    
+Quiz 
+    - Take Ques from foreignKey
+    - Create different type of quizes
+
+1v1Competetion

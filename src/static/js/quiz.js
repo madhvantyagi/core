@@ -12,7 +12,7 @@ const quizDB = [{
     a: "larry page",
     b: "Nishant Sharma",
     c: "tom cruise",
-    d: " Elon muske",
+    d: " Elon musk",
 
     ans:"ans2"
 }, {
@@ -52,9 +52,9 @@ const loadQuestion =()=>{
     option2.innerHTML=range.b;
     option3.innerHTML=range.c;
     option4.innerHTML=range.d;
-    
+    w
+}
 
-} 
 let showScore =document.querySelector('#showScore');
 loadQuestion();
 
