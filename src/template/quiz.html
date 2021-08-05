@@ -33,7 +33,7 @@
                 </li>
                 <li>
                     <input type="radio" name="answer" id="ans4" class="answer">
-                    <lablel class="label" f or="ans1" id="option4">ANSWER option</lablel>
+                    <lablel class="label" for="ans1" id="option4">ANSWER option</lablel>
                 </li>
 
             </ul>
@@ -45,7 +45,10 @@
             </div>
         </div>
     </div>
-    <script src="{% static 'js/quiz.js' %}"></script>
+    <script>
+        var question_list = JSON.parse("{{question_list|escapejs}}");
+        console.log(question_list)
+    </script>
 </body>
 
 </html>
