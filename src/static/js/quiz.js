@@ -78,7 +78,7 @@ let score=0;
 sumbit.addEventListener('click',()=>{
     const checkedAnswer =getCheckAnswer();
     console.log(getCheckAnswer());
-    if(checkedAnswer===quizDB[questionCount].ans){
+    if(checkedAnswer==quizDB[questionCount].ans){
         score++;
     };
     deselAll();

@@ -1,4 +1,4 @@
-from django.http.response import HttpResponse, JsonResponse
+from django.http.response import HttpResponse
 from django.shortcuts import render
 from .models import QuesIntType, QuesMcq
 import json
@@ -19,6 +19,10 @@ def index_view(request):
             'answer' : ques.answer
         }
         question_list.append(a)
+    
+    json_object = json.dumps(question_list, indent = 4)
+    with open("static/json/fate.json", "w") as outfile:
+        outfile.write(json_object)
         # print(question_list)
     
     return render(request, 'quiz.html', {'question_list' : json.dumps(question_list)})
