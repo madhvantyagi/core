@@ -15,7 +15,7 @@ const quizDB = [{
     d: " Elon musk",
 
     ans:"ans2"
-}, {
+}, { 
     question: "Q3: Fastest thing in the world?",
     a: "Flash",
     b: "light",
@@ -78,7 +78,7 @@ let score=0;
 sumbit.addEventListener('click',()=>{
     const checkedAnswer =getCheckAnswer();
     console.log(getCheckAnswer());
-    if(checkedAnswer===quizDB[questionCount].ans){
+    if(checkedAnswer==quizDB[questionCount].ans){
         score++;
     };
     deselAll();
