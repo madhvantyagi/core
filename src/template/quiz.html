@@ -10,14 +10,10 @@
 </head>
 
 <body>
-    <p>some rules to play<br>
-        1. By using PREVIOUS and NEXT you can check the questions<br>
-        2. But SUMBIT will finally sumbit the question <br>
-        3. use SUMBIT if you want to mark the answer and you will send to next qs automatically<br> 
-    </p>
+    
     <div class="main">
         <div class="inner-div">
-            <h2 class="question">question come here</h2>
+            <h2 class="question" id="question">question come here</h2>
             <ul>
                 <li>
                     <input type="radio" name="answer" id="ans1" class="answer">
@@ -45,7 +41,24 @@
             </div>
         </div>
     </div>
-    <script src="{% static 'js/quiz.js' %}"></script>
+    <!-- <script src="{% static 'js/quiz.js' %}"></script> -->
+    <script>
+            // }
+   
+
+     var question_list = JSON.parse("{{question_list|escapejs}}");
+    console.log(question_list);
+    var dataNode = document.getElementById('question');
+     dataNode="";
+    dataNode.innerHTML+=question_list[0].question;
+    // dataNode = document.getElementById('');
+    
+    // for(var x in question_list){
+        dataNode.innerHTML+=x+' : '+question_list[x].question+'<br><br>';
+    // }
+    // console.log(question_list);
+
+    </script>
 </body>
 
 </html>
