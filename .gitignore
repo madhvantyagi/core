@@ -5,3 +5,5 @@ pyvenv.cfg
 .DS_Store
 src/.DS_Store
 .gitignore
+techs.txt
+1v1Quiz.txt
