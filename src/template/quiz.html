@@ -1,75 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz app</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/quiz.css' %}">
-</head>
-
-<body>
-    
+    <link rel="stylesheet" href="{% static 'css/quiz.css' %}" />
+  </head>
+  <body>
     <div class="main">
-        <div class="inner-div">
-            <h2 class="question" id="question">question come here</h2>
-            <ul>
-                <li>
-                    <input type="radio" name="answer" id="ans1" class="answer">
-                    <lablel class="label" for="ans1" id="option1">ANSWER option</lablel>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="ans2" class="answer">
-                    <lablel class="label" for="ans1" id="option2">ANSWER option</lablel>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="ans3" class="answer">
-                    <lablel class="label" for="ans1" id="option3">ANSWER option</lablel>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="ans4" class="answer">
-                    <lablel class="label" f or="ans1" id="option4">ANSWER option</lablel>
-                </li>
-
-            </ul>
-            <button  class="sumbit" onclick="nextQuestion()">Next</button>
-            <button  class="sumbit" onclick="prevQuestion()">Previous</button>
-            <button id="sumbit" class="sumbit">Sumbit</button>
-            <div id="showScore" class="scoreArea">
-                score board
-            </div>
-        </div>
+      <div class="inner-div">
+        <h2 class="question" id="question">question come here</h2>
+        <ul>
+          <li>
+            <input type="radio" name="answer" id="ans1" class="answer" />
+            <lablel class="label" for="ans1" id="option1">ANSWER option</lablel>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="ans2" class="answer" />
+            <lablel class="label" for="ans1" id="option2">ANSWER option</lablel>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="ans3" class="answer" />
+            <lablel class="label" for="ans1" id="option3">ANSWER option</lablel>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="ans4" class="answer" />
+            <lablel class="label" for="ans1" id="option4"
+              >ANSWER option</lablel
+            >
+          </li>
+        </ul>
+        <!-- <button class="sumbit" onclick="nextQuestion()">Next</button> -->
+        <!-- <button class="sumbit" onclick="prevQuestion()">Previous</button> -->
+        <button id="sumbit" class="sumbit">Sumbit</button>
+        <div id="showScore" class="scoreArea">score board</div>
+      </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <!-- <script src="{% static 'js/quiz.js' %}"></script> -->
-    <script>
-            // }
-   
-
-     var question_list = JSON.parse("{{question_list|escapejs}}");
-    console.log(question_list);
-    var dataNode = document.getElementById('question');
-     dataNode="";
-    dataNode.innerHTML+=question_list[0].question;
-    // dataNode = document.getElementById('');
-    
-    // for(var x in question_list){
-        dataNode.innerHTML+=x+' : '+question_list[x].question+'<br><br>';
-    // }
-    // console.log(question_list);
-
-=======
-    <script>
-        var question_list = JSON.parse("{{question_list|escapejs}}");
-        console.log(question_list)
->>>>>>> ddfafe325f0533ea71607c53c090638aab987b26
-    </script>
-=======
     <script src="{% static 'js/quiz.js' %}"></script>
->>>>>>> d66ea86a98ff4d9dccd2b1c327dd70ecdd3a8300
-</body>
 
+   </body>
 </html>
