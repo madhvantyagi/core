@@ -52,10 +52,12 @@ const loadQuestion =()=>{
     option2.innerHTML=range.b;
     option3.innerHTML=range.c;
     option4.innerHTML=range.d;
-    w
+    
 }
 
 let showScore =document.querySelector('#showScore');
+
+
 loadQuestion();
 
 
@@ -100,11 +102,23 @@ sumbit.addEventListener('click',()=>{
 
 
 const nextQuestion =()=>{
-questionCount++;
+
+    questionCount++;
+ if(questionCount>3){
+     questionCount=0;
+ }
+
+
 loadQuestion();
 }
 
 const prevQuestion =()=>{
-    questionCount--;
+    questionCount--; 
+    if(questionCount<0){
+        questionCount=3;
+    }
+   
     loadQuestion();
 }
+
+console.log("hello")
