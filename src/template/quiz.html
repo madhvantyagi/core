@@ -1,52 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz app</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/quiz.css' %}">
-</head>
-
-<body>
-    <p>some rules to play<br>
-        1. By using PREVIOUS and NEXT you can check the questions<br>
-        2. But SUMBIT will finally sumbit the question <br>
-        3. use SUMBIT if you want to mark the answer and you will send to next qs automatically<br> 
-    </p>
+    <link rel="stylesheet" href="{% static 'css/quiz.css' %}" />
+  </head>
+  <body>
     <div class="main">
-        <div class="inner-div">
-            <h2 class="question">question come here</h2>
-            <ul>
-                <li>
-                    <input type="radio" name="answer" id="ans1" class="answer">
-                    <lablel class="label" for="ans1" id="option1">ANSWER option</lablel>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="ans2" class="answer">
-                    <lablel class="label" for="ans1" id="option2">ANSWER option</lablel>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="ans3" class="answer">
-                    <lablel class="label" for="ans1" id="option3">ANSWER option</lablel>
-                </li>
-                <li>
-                    <input type="radio" name="answer" id="ans4" class="answer">
-                    <lablel class="label" f or="ans1" id="option4">ANSWER option</lablel>
-                </li>
-
-            </ul>
-            <button  class="sumbit" onclick="nextQuestion()">Next</button>
-            <button  class="sumbit" onclick="prevQuestion()">Previous</button>
-            <button id="sumbit" class="sumbit">Sumbit</button>
-            <div id="showScore" class="scoreArea">
-                score board
-            </div>
-        </div>
+      <div class="inner-div">
+        <h2 class="question" id="question">question come here</h2>
+        <ul>
+          <li>
+            <input type="radio" name="answer" id="ans1" class="answer" />
+            <lablel class="label" for="ans1" id="option1">ANSWER option</lablel>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="ans2" class="answer" />
+            <lablel class="label" for="ans1" id="option2">ANSWER option</lablel>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="ans3" class="answer" />
+            <lablel class="label" for="ans1" id="option3">ANSWER option</lablel>
+          </li>
+          <li>
+            <input type="radio" name="answer" id="ans4" class="answer" />
+            <lablel class="label" for="ans1" id="option4"
+              >ANSWER option</lablel
+            >
+          </li>
+        </ul>
+        <!-- <button class="sumbit" onclick="nextQuestion()">Next</button> -->
+        <!-- <button class="sumbit" onclick="prevQuestion()">Previous</button> -->
+        <button id="sumbit" class="sumbit">Sumbit</button>
+        <div id="showScore" class="scoreArea">score board</div>
+      </div>
     </div>
     <script src="{% static 'js/quiz.js' %}"></script>
-</body>
 
+   </body>
 </html>
