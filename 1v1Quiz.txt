@@ -1,0 +1,19 @@
+For 1v1 Quiz :- 
+    Step 1 :- Send both COMPETITORS to urls where quiz'll be dropped.
+
+    Step 2 :- Measure counts of :-
+        1. Time taken for answering one question.
+        2. No. of questions answered.
+        3. Time remaining for test.
+        4. Show both each others usernames.
+
+    Step 3 :- Use Ajax to show and pull data without refreshing from one another.
+        - Send Data from User1's end to Backend.
+        - Send Data from User2's end to Backend.
+        
+        - Collect data from backend using JSON AJAX.
+        - Show them to one another.
+
+    Step 4 :- Validate score FE == BE.
+
+    Step 5 :- Populate DB.

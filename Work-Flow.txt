@@ -1,7 +1,13 @@
 Profiles
     - User
         - Signup / Login Authnetication and Authorisation
+
     - Stats ( their score records. )
+        - Add Users records of quiz taken and prepare an algo for how much
+         they are prepared to take the exam, and tell them how much more they
+         need and on what topics.
+        - Send data to FE and make their graphs.
+        - Compare them with other candidates.
     
 Questions
     - MCQTypeQues
@@ -10,5 +16,5 @@ Questions
 Quiz 
     - Take Ques from foreignKey
     - Create different type of quizes
-
-1v1Competetion
+    
+1v1Competetion { Web Sockets }
