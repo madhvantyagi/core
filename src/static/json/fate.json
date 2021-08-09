@@ -1,20 +1,18 @@
 [
     {
-        "question": "What is the Differentiation of sin (x)",
-        "option_1": "cos x",
-        "option_2": "tan x",
-        "option_3": "-sin x",
-        "option_4": "None of the Above",
-        "answer": "option_1"
-    },
-
-    
-    {
         "question": "Question is stated below",
         "option_1": "A",
         "option_2": "B",
         "option_3": "C",
         "option_4": "D",
         "answer": "option_1"
+    },
+    {
+        "question": "What is g?",
+        "option_1": "gravity",
+        "option_2": "acceleration",
+        "option_3": "gravitational acceleration",
+        "option_4": "Both b and c",
+        "answer": "option_4"
     }
 ]

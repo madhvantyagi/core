@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('profiles/', include('profiles.urls')),
     path('', include('questions.urls')),
-    path('appone/', include('appone.urls'))
+    path('appone/', include('appone.urls')),
+    path('quiz/', include('quiz.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
