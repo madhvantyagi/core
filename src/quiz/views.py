@@ -26,6 +26,10 @@ def one_subject_quiz(request):
         
     json_object = json.dumps(question_list, indent = 4)
     with open("static/json/fate.json", "w") as outfile:
-        outfile.write(json_object)
+        outfile.write(json_object)  
+           
+    # with open("static/json/fate.json", "r") as outfile:
+    #     txt = outfile.read()
+    #     print(txt)
     
     return render(request, 'quiz.html', {'question_list' : json.dumps(question_list)})
