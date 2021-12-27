@@ -1,4 +1,4 @@
-from django.http.response import HttpResponse
+from django.http.response import HttpResponse, JsonResponse
 from django.shortcuts import render
 import json
 import os
@@ -24,12 +24,15 @@ def one_subject_quiz(request):
         }
         question_list.append(a)
         
-    json_object = json.dumps(question_list, indent = 4)
-    with open("static/json/fate.json", "w") as outfile:
-        outfile.write(json_object)  
+    # json_object = json.dumps(question_list, indent = 4)
+    # with open("static/json/fate.json", "w") as outfile:
+    #     outfile.write(json_object)  
            
     # with open("static/json/fate.json", "r") as outfile:
     #     txt = outfile.read()
     #     print(txt)
     
-    return render(request, 'quiz.html', {'question_list' : json.dumps(question_list)})
+    return JsonResponse(data=question_list, safe=False)
+
+def page_view(request):
+    return render(request, 'quiz.html')
